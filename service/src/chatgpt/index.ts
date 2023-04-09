@@ -127,7 +127,7 @@ async function chatReplyProcess(options: RequestOptions) {
 }
 
 async function fetchUsage() {
-  const OPENAI_API_KEY = process.env.OPENAI_API_KEY
+  const OPENAI_API_KEY = "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"
   const OPENAI_API_BASE_URL = process.env.OPENAI_API_BASE_URL
 
   if (!isNotEmptyString(OPENAI_API_KEY))
