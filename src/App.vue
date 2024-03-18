@@ -1,22 +1,26 @@
-<script setup lang="ts">
-import { NConfigProvider } from 'naive-ui'
-import { NaiveProvider } from '@/components/common'
-import { useTheme } from '@/hooks/useTheme'
-import { useLanguage } from '@/hooks/useLanguage'
+<template>
+  <img alt="Vue logo" src="./assets/logo.png">
+  <HelloWorld msg="Welcome to Your Vue.js App"/>
+</template>
 
-const { theme, themeOverrides } = useTheme()
-const { language } = useLanguage()
+<script>
+import HelloWorld from './components/HelloWorld.vue'
+
+export default {
+  name: 'App',
+  components: {
+    HelloWorld
+  }
+}
 </script>
 
-<template>
-  <NConfigProvider
-    class="h-full"
-    :theme="theme"
-    :theme-overrides="themeOverrides"
-    :locale="language"
-  >
-    <NaiveProvider>
-      <RouterView />
-    </NaiveProvider>
-  </NConfigProvider>
-</template>
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>
